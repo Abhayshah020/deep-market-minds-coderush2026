@@ -1,0 +1,463 @@
+.simulation-page {
+  min-height: 100vh;
+  padding: 32px 40px 70px;
+  background:
+    radial-gradient(
+      circle at 10% 0%,
+      rgba(118, 81, 169, 0.08),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(49, 198, 232, 0.08),
+      transparent 28%
+    ),
+    #fff8e8;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+.simulation-shell {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.simulation-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+
+  padding: 28px 30px;
+
+  background: #ffffff;
+
+  border: 3px solid #241b42;
+  border-radius: 18px;
+
+  box-shadow: 7px 7px 0 #7651a9;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.simulation-page-header::after {
+  content: "";
+  position: absolute;
+
+  width: 110px;
+  height: 110px;
+
+  right: -30px;
+  top: -35px;
+
+  background: #ffd84d;
+
+  border-radius: 50%;
+
+  opacity: 0.5;
+}
+
+.simulation-page-kicker {
+  display: inline-flex;
+  align-items: center;
+
+  margin-bottom: 8px;
+
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.6px;
+
+  color: #7651a9;
+}
+
+.simulation-page-header h1 {
+  margin: 0;
+
+  color: #241b42;
+
+  font-size: 38px;
+  line-height: 1.05;
+  font-weight: 900;
+
+  letter-spacing: -1px;
+}
+
+.simulation-page-header p {
+  margin: 10px 0 0;
+
+  max-width: 650px;
+
+  color: #817791;
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   WORLD BADGE
+========================================= */
+
+.simulation-world-badge {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  min-width: 210px;
+
+  padding: 13px 16px;
+
+  background: #f1eaff;
+
+  border: 2px solid #7651a9;
+  border-radius: 12px;
+}
+
+.world-badge-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  background: #31c6e8;
+
+  border: 2px solid #241b42;
+  border-radius: 10px;
+
+  font-size: 22px;
+}
+
+.world-badge-label {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #817791;
+
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.simulation-world-badge strong {
+  color: #241b42;
+
+  font-size: 12px;
+  font-weight: 900;
+}
+
+/* =========================================
+   MAIN CLOCK SECTION
+========================================= */
+
+.simulation-clock-section {
+  margin-top: 34px;
+
+  padding: 28px;
+
+  background: rgba(255, 255, 255, 0.72);
+
+  border: 3px solid #ded5eb;
+  border-radius: 18px;
+
+  box-shadow: 5px 5px 0 rgba(118, 81, 169, 0.16);
+}
+
+.simulation-clock-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding-bottom: 25px;
+
+  border-bottom: 2px dashed #d9d0e6;
+}
+
+.section-kicker {
+  display: inline-flex;
+  align-items: center;
+
+  margin-bottom: 7px;
+
+  color: #7651a9;
+
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.simulation-clock-header h2 {
+  margin: 0;
+
+  color: #241b42;
+
+  font-size: 26px;
+  font-weight: 900;
+}
+
+.simulation-clock-header p {
+  margin: 7px 0 0;
+
+  color: #817791;
+
+  font-size: 13px;
+}
+
+.clock-status-badge {
+  flex-shrink: 0;
+
+  padding: 9px 13px;
+
+  background: #e8fbff;
+
+  border: 2px solid #31c6e8;
+  border-radius: 8px;
+
+  color: #286b7a;
+
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.8px;
+}
+
+/* =========================================
+   MARKET COMPONENT SPACING
+========================================= */
+
+.simulation-clock-section > section {
+  margin-top: 28px;
+}
+
+/*
+   Give nested market sections a little
+   breathing room without changing
+   their internal functionality.
+*/
+
+.simulation-clock-section > section:first-of-type {
+  margin-top: 30px;
+}
+
+/* =========================================
+   QUIZ LAUNCH
+========================================= */
+
+.quiz-launch-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 24px;
+
+  margin-top: 34px;
+  padding: 22px 24px;
+
+  background: #fff5c9;
+
+  border: 3px solid #241b42;
+  border-radius: 15px;
+
+  box-shadow: 5px 5px 0 #ffd84d;
+}
+
+.quiz-launch-content {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+}
+
+.quiz-launch-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 52px;
+  height: 52px;
+
+  flex-shrink: 0;
+
+  background: #ffffff;
+
+  border: 2px solid #241b42;
+  border-radius: 12px;
+
+  font-size: 25px;
+}
+
+.quiz-launch-kicker {
+  margin-bottom: 4px;
+
+  color: #7651a9;
+
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+}
+
+.quiz-launch-title {
+  color: #241b42;
+
+  font-size: 17px;
+  font-weight: 900;
+}
+
+.quiz-launch-description {
+  margin-top: 4px;
+
+  color: #817791;
+
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.quiz-launch-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  flex-shrink: 0;
+
+  padding: 12px 18px;
+
+  background: #7651a9;
+
+  border: 2px solid #241b42;
+  border-radius: 9px;
+
+  color: #ffffff;
+
+  font-size: 11px;
+  font-weight: 900;
+
+  cursor: pointer;
+
+  box-shadow: 3px 3px 0 #241b42;
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background 0.15s ease;
+}
+
+.quiz-launch-button:hover {
+  background: #8058b9;
+
+  transform: translate(1px, 1px);
+
+  box-shadow: 2px 2px 0 #241b42;
+}
+
+.quiz-launch-button:active {
+  transform: translate(3px, 3px);
+
+  box-shadow: 0 0 0 #241b42;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+  .simulation-page {
+    padding: 25px 20px 60px;
+  }
+
+  .simulation-page-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .simulation-world-badge {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .simulation-clock-section {
+    padding: 22px;
+  }
+
+  .simulation-clock-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .clock-status-badge {
+    width: fit-content;
+  }
+
+  .quiz-launch-card {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .quiz-launch-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  .simulation-page {
+    padding: 18px 12px 45px;
+  }
+
+  .simulation-page-header {
+    padding: 22px 18px;
+
+    border-radius: 14px;
+
+    box-shadow: 4px 4px 0 #7651a9;
+  }
+
+  .simulation-page-header h1 {
+    font-size: 30px;
+  }
+
+  .simulation-page-header p {
+    font-size: 12px;
+  }
+
+  .simulation-clock-section {
+    margin-top: 25px;
+    padding: 17px;
+
+    border-radius: 14px;
+  }
+
+  .simulation-clock-header h2 {
+    font-size: 22px;
+  }
+
+  .simulation-clock-header p {
+    font-size: 12px;
+  }
+
+  .quiz-launch-card {
+    padding: 18px;
+  }
+
+  .quiz-launch-content {
+    align-items: flex-start;
+  }
+
+  .quiz-launch-title {
+    font-size: 15px;
+  }
+}

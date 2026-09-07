@@ -1,5 +1,5 @@
 "use client";
-
+import './SimulationPage.css';
 import { useEffect, useMemo, useRef, useState } from "react";
 
 import { SimulationClock } from "../clock/simulation-clock";
@@ -1359,174 +1359,174 @@ export default function SimulationPage() {
     });
 
     return (
-        <main
-            style={{
-                minHeight: "100vh",
-                padding: "0 40px",
-                fontFamily: "Arial, sans-serif",
-            }}
-        >
-            <section
-                style={{
-                    marginTop: "40px",
-                    padding: "30px",
-                    border: "1px solid #ddd",
-                    borderRadius: "12px",
-                }}
-            >
-                <h2>Simulation Clock</h2>
+        <main className="simulation-page">
+            <section className="simulation-shell">
+                {/* Page Header */}
+                <header className="simulation-page-header">
+                    <div>
+                        <div className="simulation-page-kicker">
+                            🎮 DEEP MARKETS MIND
+                        </div>
 
-                <NepalMarketSection nepalState={nepalState} />
+                        <h1>Simulation World</h1>
 
-                <InternationalMarketsSection
-                    marketState={marketState}
-                />
+                        <p>
+                            Explore markets, discover economic events,
+                            and learn how the world economy moves.
+                        </p>
+                    </div>
 
-                <CurrencyIndicesSection
-                    currencyState={currencyState}
-                />
+                    <div className="simulation-world-badge">
+                        <span className="world-badge-icon">
+                            🌍
+                        </span>
 
-                <SentimentSection
-                    sentimentState={sentimentState}
-                />
+                        <div>
+                            <span className="world-badge-label">
+                                MARKET WORLD
+                            </span>
 
-                <NewsEventsSection
-                    newsEvents={newsEvents}
-                    filteredNewsEvents={filteredNewsEvents}
-                    newsFromDate={newsFromDate}
-                    newsToDate={newsToDate}
-                    setNewsFromDate={setNewsFromDate}
-                    setNewsToDate={setNewsToDate}
-                />
+                            <strong>
+                                LIVE SIMULATION
+                            </strong>
+                        </div>
+                    </div>
+                </header>
 
-                <EconomicStateSection
-                    economicState={economicState}
-                />
+                {/* Simulation Clock */}
+                <section className="simulation-clock-section">
+                    <div className="simulation-clock-header">
+                        <div>
+                            <div className="section-kicker">
+                                ⏱ TIME CONTROL
+                            </div>
 
-                <BondMarketSection bondState={bondState} />
+                            <h2>Simulation Clock</h2>
 
-                <MarketCorrelationSection
-                    correlationState={correlationState}
-                />
+                            <p>
+                                Control the flow of time and watch
+                                the economy react.
+                            </p>
+                        </div>
 
-                <PricingChart
-                    pricingState={pricingState}
-                    history={pricingHistory}
+                        <div className="clock-status-badge">
+                            🕐 SIMULATION MODE
+                        </div>
+                    </div>
 
-                    currencyHistory={
-                        currencyHistory
-                    }
+                    {/* Simulation Date */}
+                    <SimulationControls
+                        formattedDateTime={
+                            formattedDateTime
+                        }
+                        isRunning={isRunning}
+                        direction={direction}
+                        isAtMinimumTime={
+                            isAtMinimumTime
+                        }
+                        speed={speed}
+                        SIMULATION_SPEEDS={
+                            SIMULATION_SPEEDS
+                        }
+                        handleStart={
+                            handleStart
+                        }
+                        handleStop={
+                            handleStop
+                        }
+                        handleSpeedChange={
+                            handleSpeedChange
+                        }
+                    />
 
-                    bondHistory={
-                        bondHistory
-                    }
+                    <PricingChart
+                        pricingState={pricingState}
+                        history={pricingHistory}
+                        currencyHistory={
+                            currencyHistory
+                        }
+                        bondHistory={
+                            bondHistory
+                        }
+                        sentimentHistory={
+                            sentimentHistory
+                        }
+                        marketHistory={
+                            marketHistory
+                        }
+                        nepalHistory={
+                            nepalHistory
+                        }
+                        economicHistory={
+                            economicHistory
+                        }
+                        correlationHistory={
+                            correlationHistory
+                        }
+                    />
 
-                    sentimentHistory={
-                        sentimentHistory
-                    }
+                    <DemoTradingSection
+                        tradingState={tradingState}
+                        tradingSymbol={tradingSymbol}
+                        setTradingSymbol={setTradingSymbol}
+                        tradingOrderType={tradingOrderType}
+                        setTradingOrderType={setTradingOrderType}
+                        tradingLeverage={tradingLeverage}
+                        setTradingLeverage={setTradingLeverage}
+                        tradingLotSize={tradingLotSize}
+                        setTradingLotSize={setTradingLotSize}
+                        tradingPrice={tradingPrice}
+                        setTradingPrice={setTradingPrice}
+                        tradingSide={tradingSide}
+                        setTradingSide={(value: string) =>
+                            setTradingSide(
+                                value as TradingSide
+                            )
+                        }
+                        selectedInstrument={selectedInstrument}
+                        selectedTradingQuote={
+                            selectedTradingQuote
+                        }
+                        selectedPosition={selectedPosition}
+                        orderQuantity={orderQuantity}
+                        getOrderQuantity={getOrderQuantity}
+                        handleClosePosition={
+                            handleClosePosition
+                        }
+                        tradingEngineRef={tradingEngineRef}
+                        setTradingState={setTradingState}
+                        TRADING_INSTRUMENTS={[
+                            ...TRADING_INSTRUMENTS,
+                        ]}
+                    />
 
-                    marketHistory={
-                        marketHistory
-                    }
+                    <PlayerPerformanceReport
+                        performance={
+                            playerPerformanceState
+                        }
+                    />
 
-                    nepalHistory={
-                        nepalHistory
-                    }
-
-                    economicHistory={
-                        economicHistory
-                    }
-
-                    correlationHistory={
-                        correlationHistory
-                    }
-                />
-
-                <DemoTradingSection
-                    tradingState={tradingState}
-                    tradingSymbol={tradingSymbol}
-                    setTradingSymbol={setTradingSymbol}
-                    tradingOrderType={tradingOrderType}
-                    setTradingOrderType={setTradingOrderType}
-                    tradingLeverage={tradingLeverage}
-                    setTradingLeverage={setTradingLeverage}
-                    tradingLotSize={tradingLotSize}
-                    setTradingLotSize={setTradingLotSize}
-                    tradingPrice={tradingPrice}
-                    setTradingPrice={setTradingPrice}
-                    tradingSide={tradingSide}
-                    setTradingSide={(value: string) =>
-                        setTradingSide(value as TradingSide)
-                    }
-                    selectedInstrument={selectedInstrument}
-                    selectedTradingQuote={selectedTradingQuote}
-                    selectedPosition={selectedPosition}
-                    orderQuantity={orderQuantity}
-                    getOrderQuantity={getOrderQuantity}
-                    handleClosePosition={handleClosePosition}
-                    tradingEngineRef={tradingEngineRef}
-                    setTradingState={setTradingState}
-                    TRADING_INSTRUMENTS={[...TRADING_INSTRUMENTS]}
-                />
-
-                <PlayerPerformanceReport
-                    performance={playerPerformanceState}
-                />
-
-                {!quizSession && (
-                    <section
-                        style={{
-                            marginTop:
-                                "30px",
-                            padding:
-                                "20px",
-                            border:
-                                "1px solid #1e2933",
-                            borderRadius:
-                                "12px",
-                            background:
-                                "#0d131a",
-                        }}
-                    >
-                        <div
-                            style={{
-                                display:
-                                    "flex",
-                                justifyContent:
-                                    "space-between",
-                                alignItems:
-                                    "center",
-                                gap:
-                                    "15px",
-                            }}
-                        >
-                            <div>
-                                <div
-                                    style={{
-                                        fontSize:
-                                            "15px",
-                                        fontWeight:
-                                            600,
-                                        color:
-                                            "#ffffff",
-                                    }}
-                                >
-                                    AI Knowledge Quiz
+                    {!quizSession && (
+                        <section className="quiz-launch-card">
+                            <div className="quiz-launch-content">
+                                <div className="quiz-launch-icon">
+                                    🧠
                                 </div>
 
-                                <div
-                                    style={{
-                                        marginTop:
-                                            "4px",
-                                        fontSize:
-                                            "11px",
-                                        color:
-                                            "#6f7d8b",
-                                    }}
-                                >
-                                    Test your knowledge of
-                                    macroeconomics, markets
-                                    and trading.
+                                <div>
+                                    <div className="quiz-launch-kicker">
+                                        ⭐ BONUS MISSION
+                                    </div>
+
+                                    <div className="quiz-launch-title">
+                                        AI Knowledge Quiz
+                                    </div>
+
+                                    <div className="quiz-launch-description">
+                                        Test your knowledge of
+                                        macroeconomics, markets
+                                        and trading.
+                                    </div>
                                 </div>
                             </div>
 
@@ -1535,195 +1535,81 @@ export default function SimulationPage() {
                                 onClick={
                                     handleStartQuiz
                                 }
-                                style={{
-                                    padding:
-                                        "9px 16px",
-                                    border:
-                                        "none",
-                                    borderRadius:
-                                        "6px",
-                                    background:
-                                        "#253342",
-                                    color:
-                                        "#ffffff",
-                                    cursor:
-                                        "pointer",
-                                    fontSize:
-                                        "11px",
-                                    fontWeight:
-                                        600,
-                                }}
+                                className="quiz-launch-button"
                             >
+                                <span>
+                                    🎯
+                                </span>
+
                                 Start 10 Question Quiz
                             </button>
-                        </div>
-                    </section>
-                )}
+                        </section>
+                    )}
 
-                <QuizSection
-                    quizSession={quizSession}
-                    selectedQuizAnswer={selectedQuizAnswer}
-                    quizResult={quizResult}
-                    quizAnswerLocked={quizAnswerLocked}
-                    handleStartQuiz={handleStartQuiz}
-                    handleResetQuiz={handleResetQuiz}
-                    handleQuizAnswer={handleQuizAnswer}
-                    handleQuizNext={handleQuizNext}
-                />
-
-                {/* Simulation Date */}
-                <SimulationControls
-    formattedDateTime={formattedDateTime}
-    isRunning={isRunning}
-    direction={direction}
-    isAtMinimumTime={isAtMinimumTime}
-    speed={speed}
-    SIMULATION_SPEEDS={SIMULATION_SPEEDS}
-    handleStart={handleStart}
-    handleStop={handleStop}
-    handleSpeedChange={handleSpeedChange}
-/>
-
-                {/* <div
-                    style={{
-                        marginTop: "30px",
-                    }}
-                >
-                    <p
-                        style={{
-                            margin: 0,
-                            color: "#666",
-                        }}
-                    >
-                        Simulation Time
-                    </p>
-
-                    <div
-                        style={{
-                            marginTop: "8px",
-                            fontSize: "32px",
-                            fontWeight: "bold",
-                        }}
-                    >
-                        {formattedDateTime}
-                    </div>
-                </div> */}
-
-                {/* Status */}
-                <div
-                    style={{
-                        marginTop: "20px",
-                    }}
-                >
-                    <strong>Status:</strong>{" "}
-                    {isRunning
-                        ? "Running"
-                        : "Stopped"}
-                </div>
-
-                <div
-                    style={{
-                        marginTop: "8px",
-                    }}
-                >
-                    <strong>Direction:</strong>{" "}
-                    {direction === "forward"
-                        ? "Forward"
-                        : "Backward"}
-                </div>
-
-                {/* Direction Controls */}
-                <div
-                    style={{
-                        display: "flex",
-                        gap: "12px",
-                        marginTop: "30px",
-                    }}
-                >
-                    <button
-                        type="button"
-                        disabled={
-                            isAtMinimumTime
+                    <QuizSection
+                        quizSession={quizSession}
+                        selectedQuizAnswer={
+                            selectedQuizAnswer
                         }
-                        onClick={() =>
-                            handleStart("backward")
+                        quizResult={quizResult}
+                        quizAnswerLocked={
+                            quizAnswerLocked
                         }
-                    >
-                        ◀◀ Backward
-                    </button>
-                    <button
-                        type="button"
-                        onClick={handleStop}
-                    >
-                        ■ Stop
-                    </button>
-
-                    <button
-                        type="button"
-                        onClick={() =>
-                            handleStart("forward")
+                        handleStartQuiz={
+                            handleStartQuiz
                         }
-                    >
-                        Forward ▶▶
-                    </button>
-                </div>
+                        handleResetQuiz={
+                            handleResetQuiz
+                        }
+                        handleQuizAnswer={
+                            handleQuizAnswer
+                        }
+                        handleQuizNext={
+                            handleQuizNext
+                        }
+                    />
 
-                {/* Speed Controls */}
-                <div
-                    style={{
-                        marginTop: "35px",
-                    }}
-                >
-                    <h3>Simulation Speed</h3>
 
-                    <div
-                        style={{
-                            display: "flex",
-                            flexWrap: "wrap",
-                            gap: "10px",
-                            marginTop: "15px",
-                        }}
-                    >
-                        {SIMULATION_SPEEDS.map(
-                            (simulationSpeed) => (
-                                <button
-                                    key={simulationSpeed}
-                                    type="button"
-                                    onClick={() =>
-                                        handleSpeedChange(
-                                            simulationSpeed
-                                        )
-                                    }
-                                    style={{
-                                        padding:
-                                            "8px 14px",
-                                        fontWeight:
-                                            speed ===
-                                                simulationSpeed
-                                                ? "bold"
-                                                : "normal",
-                                    }}
-                                >
-                                    1:
-                                    {simulationSpeed.toLocaleString()}
-                                </button>
-                            )
-                        )}
-                    </div>
-                </div>
 
-                {/* Current Speed */}
-                <div
-                    style={{
-                        marginTop: "25px",
-                    }}
-                >
-                    <strong>
-                        Current Speed:
-                    </strong>{" "}
-                    1:{speed.toLocaleString()}
-                </div>
-            </section >
-        </main >
+
+                    <NewsEventsSection
+                        newsEvents={newsEvents}
+                        filteredNewsEvents={filteredNewsEvents}
+                        newsFromDate={newsFromDate}
+                        newsToDate={newsToDate}
+                        setNewsFromDate={setNewsFromDate}
+                        setNewsToDate={setNewsToDate}
+                    />
+
+                    <EconomicStateSection
+                        economicState={economicState}
+                    />
+
+                    <BondMarketSection
+                        bondState={bondState}
+                    />
+
+                    <MarketCorrelationSection
+                        correlationState={correlationState}
+                    />
+
+                    <NepalMarketSection
+                        nepalState={nepalState}
+                    />
+
+                    <InternationalMarketsSection
+                        marketState={marketState}
+                    />
+
+                    <CurrencyIndicesSection
+                        currencyState={currencyState}
+                    />
+
+                    <SentimentSection
+                        sentimentState={sentimentState}
+                    />
+                </section>
+            </section>
+        </main>
     );
 }
