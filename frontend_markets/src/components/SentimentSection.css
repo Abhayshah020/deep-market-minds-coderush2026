@@ -1,0 +1,520 @@
+.sentiment-section {
+  position: relative;
+
+  margin-top: 30px;
+  padding: 32px;
+
+  overflow: hidden;
+
+  background: #fffdf7;
+
+  border: 3px solid #d9cdea;
+  border-radius: 14px;
+
+  color: #302747;
+
+  box-shadow: 6px 6px 0 rgba(118, 81, 169, 0.15);
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.sentiment-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 40px;
+
+  padding-bottom: 30px;
+
+  border-bottom: 2px dashed #ddd3eb;
+}
+
+.sentiment-label {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
+  margin-bottom: 12px;
+
+  color: #7651a9;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 1px;
+}
+
+.sentiment-label span {
+  font-size: 15px;
+}
+
+.sentiment-header h2 {
+  margin: 0;
+
+  font-family: "Nunito", sans-serif;
+
+  font-size: clamp(40px, 5vw, 60px);
+
+  line-height: 0.9;
+
+  letter-spacing: -3px;
+
+  font-weight: 900;
+}
+
+.sentiment-header h2 span {
+  color: #7651a9;
+}
+
+.sentiment-header p {
+  max-width: 600px;
+
+  margin: 20px 0 0;
+
+  color: #817791;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+/* =====================================================
+   MOOD CHARACTER
+===================================================== */
+
+.sentiment-character {
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  flex-shrink: 0;
+
+  padding: 14px 18px;
+
+  background: #f5efff;
+
+  border: 3px solid #cdb9e7;
+
+  border-radius: 8px;
+
+  transform: rotate(2deg);
+}
+
+.mood-face {
+  width: 55px;
+  height: 55px;
+
+  display: grid;
+  place-items: center;
+
+  background: #ffd84d;
+
+  border: 3px solid #302447;
+
+  border-radius: 50%;
+
+  box-shadow: 3px 3px 0 #31c6e8;
+
+  font-size: 27px;
+}
+
+.mood-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.mood-text strong {
+  color: #443463;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 10px;
+}
+
+.mood-text span {
+  margin-top: 4px;
+
+  color: #817791;
+
+  font-size: 11px;
+}
+
+/* =====================================================
+   LESSON
+===================================================== */
+
+.sentiment-lesson {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 14px;
+
+  margin-top: 25px;
+  padding: 18px;
+
+  background: #fff8d9;
+
+  border: 2px solid #f0d76c;
+
+  border-radius: 8px;
+}
+
+.lesson-icon {
+  width: 40px;
+  height: 40px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  background: #ffd84d;
+
+  border-radius: 6px;
+
+  font-size: 20px;
+}
+
+.sentiment-lesson strong {
+  color: #5b4810;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 10px;
+}
+
+.sentiment-lesson p {
+  margin: 5px 0 0;
+
+  color: #78692f;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+/* =====================================================
+   GRID
+===================================================== */
+
+.sentiment-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 15px;
+
+  margin-top: 25px;
+}
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.sentiment-card {
+  position: relative;
+
+  min-height: 205px;
+
+  padding: 18px;
+
+  background: #ffffff;
+
+  border: 3px solid #e0d8ea;
+
+  border-radius: 9px;
+
+  box-shadow: 4px 4px 0 rgba(118, 81, 169, 0.08);
+
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.sentiment-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 5px 5px 0 rgba(118, 81, 169, 0.18);
+}
+
+/* =====================================================
+   CARD TOP
+===================================================== */
+
+.sentiment-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sentiment-card-icon {
+  width: 40px;
+  height: 40px;
+
+  display: grid;
+  place-items: center;
+
+  background: #f5f1fb;
+
+  border-radius: 7px;
+
+  font-size: 20px;
+}
+
+.sentiment-card-type {
+  color: #a096ad;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: 0.7px;
+}
+
+/* =====================================================
+   CARD TEXT
+===================================================== */
+
+.sentiment-card-label {
+  margin-top: 17px;
+
+  color: #817791;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 9px;
+
+  font-weight: 500;
+}
+
+.sentiment-value {
+  margin-top: 4px;
+
+  color: #302447;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 27px;
+
+  font-weight: 600;
+}
+
+/* =====================================================
+   METER
+===================================================== */
+
+.sentiment-meter {
+  position: relative;
+
+  width: 100%;
+  height: 9px;
+
+  margin-top: 17px;
+
+  overflow: visible;
+
+  background: #eee9f4;
+
+  border-radius: 10px;
+}
+
+.sentiment-meter-fill {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  min-width: 4px;
+
+  background: linear-gradient(90deg, #31c6e8, #7651a9);
+
+  border-radius: 10px;
+
+  transition: width 0.4s ease;
+}
+
+.sentiment-meter-marker {
+  position: absolute;
+
+  top: 50%;
+
+  width: 14px;
+  height: 14px;
+
+  transform: translate(-50%, -50%);
+
+  background: #ffd84d;
+
+  border: 2px solid #302447;
+
+  border-radius: 50%;
+
+  transition: left 0.4s ease;
+}
+
+/* =====================================================
+   RANGE
+===================================================== */
+
+.sentiment-range {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 8px;
+
+  color: #9a91a6;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+}
+
+/* =====================================================
+   LEARNING PANEL
+===================================================== */
+
+.sentiment-learning {
+  margin-top: 25px;
+
+  overflow: hidden;
+
+  background: #f7f1ff;
+
+  border: 3px solid #7651a9;
+
+  border-radius: 9px;
+}
+
+.learning-title {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 12px 17px;
+
+  background: #7651a9;
+
+  color: #ffffff;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 10px;
+}
+
+.learning-title span {
+  font-size: 16px;
+}
+
+.learning-body {
+  padding: 18px;
+}
+
+.learning-question {
+  color: #443463;
+
+  font-size: 16px;
+
+  font-weight: 900;
+}
+
+.learning-body p {
+  max-width: 750px;
+
+  margin: 6px 0 0;
+
+  color: #817791;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.sentiment-footer {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-top: 20px;
+}
+
+.sentiment-footer span {
+  padding: 7px 10px;
+
+  background: #f7f3fa;
+
+  color: #817791;
+
+  border: 1px solid #e2dbea;
+
+  border-radius: 4px;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1100px) {
+  .sentiment-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 800px) {
+  .sentiment-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .sentiment-character {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .sentiment-section {
+    padding: 22px;
+  }
+
+  .sentiment-header h2 {
+    font-size: 44px;
+  }
+
+  .sentiment-header p {
+    font-size: 13px;
+  }
+
+  .sentiment-character {
+    width: 100%;
+  }
+
+  .sentiment-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sentiment-card {
+    min-height: 190px;
+  }
+
+  .sentiment-footer {
+    flex-direction: column;
+  }
+}

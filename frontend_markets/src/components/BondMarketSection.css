@@ -1,0 +1,597 @@
+.bond-section {
+    position: relative;
+
+    margin-top: 30px;
+    padding: 32px;
+
+    overflow: hidden;
+
+    background: #fffdf7;
+
+    border: 3px solid #d9cdea;
+    border-radius: 14px;
+
+    box-shadow:
+        6px 6px 0 rgba(118, 81, 169, 0.16);
+
+    color: #302747;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.bond-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 40px;
+
+    padding-bottom: 30px;
+
+    border-bottom: 2px dashed #ddd3eb;
+}
+
+.bond-game-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    margin-bottom: 12px;
+
+    color: #7651a9;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+.bond-game-label span {
+    font-size: 15px;
+}
+
+.bond-title-area h2 {
+    margin: 0;
+
+    font-family: "Nunito", sans-serif;
+
+    font-size: clamp(40px, 5vw, 62px);
+
+    line-height: 0.88;
+
+    letter-spacing: -3px;
+
+    font-weight: 900;
+}
+
+.bond-title-area h2 span {
+    color: #7651a9;
+}
+
+.bond-title-area p {
+    max-width: 580px;
+
+    margin: 20px 0 0;
+
+    color: #817791;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   BOND BUDDY
+===================================================== */
+
+.bond-character {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 14px 18px;
+
+    flex-shrink: 0;
+
+    background: #f5efff;
+
+    border: 3px solid #cdb9e7;
+
+    border-radius: 8px;
+
+    transform: rotate(2deg);
+}
+
+.character-coin {
+    width: 52px;
+    height: 52px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: #ffd84d;
+
+    color: #302447;
+
+    border: 3px solid #302447;
+
+    box-shadow:
+        3px 3px 0 #31c6e8;
+
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.character-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.character-text strong {
+    color: #443463;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 10px;
+}
+
+.character-text span {
+    margin-top: 3px;
+
+    color: #817791;
+
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   LESSON
+===================================================== */
+
+.bond-lesson {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 14px;
+
+    margin-top: 25px;
+    padding: 18px;
+
+    background: #fff8d9;
+
+    border: 2px solid #f0d76c;
+
+    border-radius: 8px;
+}
+
+.lesson-icon {
+    width: 40px;
+    height: 40px;
+
+    display: grid;
+    place-items: center;
+
+    flex-shrink: 0;
+
+    background: #ffd84d;
+
+    border-radius: 6px;
+
+    font-size: 20px;
+}
+
+.bond-lesson strong {
+    color: #5b4810;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 10px;
+}
+
+.bond-lesson p {
+    margin: 5px 0 0;
+
+    color: #78692f;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   BOND CARDS
+===================================================== */
+
+.bond-cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 15px;
+
+    margin-top: 25px;
+}
+
+.bond-card {
+    position: relative;
+
+    min-height: 250px;
+
+    padding: 22px;
+
+    background: #ffffff;
+
+    border: 3px solid #ddd4e9;
+
+    border-radius: 9px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.bond-card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* Card colors */
+
+.short-term {
+    border-color: #bcecf5;
+
+    box-shadow:
+        4px 4px 0 rgba(49, 198, 232, 0.2);
+}
+
+.short-term:hover {
+    box-shadow:
+        5px 5px 0 rgba(49, 198, 232, 0.4);
+}
+
+.long-term {
+    border-color: #ded0f0;
+
+    box-shadow:
+        4px 4px 0 rgba(118, 81, 169, 0.18);
+}
+
+.long-term:hover {
+    box-shadow:
+        5px 5px 0 rgba(118, 81, 169, 0.35);
+}
+
+.spread-card {
+    border-color: #f0dda0;
+
+    box-shadow:
+        4px 4px 0 rgba(255, 216, 77, 0.25);
+}
+
+.spread-card:hover {
+    box-shadow:
+        5px 5px 0 rgba(255, 216, 77, 0.45);
+}
+
+
+/* =====================================================
+   CARD CONTENT
+===================================================== */
+
+.bond-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bond-icon {
+    width: 42px;
+    height: 42px;
+
+    display: grid;
+    place-items: center;
+
+    background: #f5f1fb;
+
+    border-radius: 7px;
+
+    font-size: 21px;
+}
+
+.bond-duration {
+    color: #958aa5;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 8px;
+    font-weight: 600;
+
+    letter-spacing: 0.7px;
+}
+
+.bond-card-label {
+    display: block;
+
+    margin-top: 22px;
+
+    color: #817791;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+}
+
+.bond-value {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #302447;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 31px;
+    font-weight: 600;
+}
+
+.bond-card p {
+    margin: 10px 0 0;
+
+    color: #817791;
+
+    font-size: 12px;
+
+    line-height: 1.55;
+}
+
+
+/* =====================================================
+   YIELD METER
+===================================================== */
+
+.bond-meter {
+    position: absolute;
+
+    left: 22px;
+    right: 22px;
+    bottom: 20px;
+
+    height: 7px;
+
+    overflow: hidden;
+
+    background: #eee9f4;
+
+    border-radius: 10px;
+}
+
+.bond-meter div {
+    height: 100%;
+
+    background: #31c6e8;
+
+    border-radius: 10px;
+
+    transition: width 0.4s ease;
+}
+
+.long-term .bond-meter div {
+    background: #7651a9;
+}
+
+
+/* =====================================================
+   SPREAD STATUS
+===================================================== */
+
+.spread-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    margin-top: 15px;
+    padding: 7px 10px;
+
+    background: #fff8d9;
+
+    color: #8b721c;
+
+    border: 2px solid #eed97b;
+
+    border-radius: 4px;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 8px;
+    font-weight: 600;
+}
+
+.spread-status span {
+    font-size: 12px;
+}
+
+.spread-card.warning {
+    border-color: #f0b7bf;
+
+    box-shadow:
+        4px 4px 0 rgba(232, 95, 112, 0.18);
+}
+
+.spread-card.warning .spread-status {
+    background: #fff0f2;
+
+    color: #bd4c5d;
+
+    border-color: #efb1ba;
+}
+
+
+/* =====================================================
+   LEARNING PANEL
+===================================================== */
+
+.bond-learning {
+    margin-top: 25px;
+
+    overflow: hidden;
+
+    border: 3px solid #7651a9;
+
+    border-radius: 9px;
+
+    background: #f7f1ff;
+}
+
+.learning-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 12px 17px;
+
+    background: #7651a9;
+
+    color: #ffffff;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 10px;
+}
+
+.learning-title span {
+    font-size: 16px;
+}
+
+.learning-content {
+    padding: 18px;
+}
+
+.learning-question {
+    color: #443463;
+
+    font-size: 15px;
+
+    font-weight: 900;
+}
+
+.learning-answer {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 12px;
+
+    margin-top: 14px;
+}
+
+.answer-icon {
+    font-size: 27px;
+}
+
+.learning-answer strong {
+    color: #302447;
+
+    font-size: 13px;
+}
+
+.learning-answer p {
+    margin: 4px 0 0;
+
+    color: #817791;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.bond-footer {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.bond-footer span {
+    padding: 7px 10px;
+
+    background: #f7f3fa;
+
+    color: #817791;
+
+    border: 1px solid #e2dbea;
+
+    border-radius: 4px;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 8px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 850px) {
+
+    .bond-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .bond-character {
+        align-self: flex-start;
+    }
+
+    .bond-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .bond-card {
+        min-height: 230px;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .bond-section {
+        padding: 22px;
+    }
+
+    .bond-title-area h2 {
+        font-size: 45px;
+    }
+
+    .bond-title-area p {
+        font-size: 13px;
+    }
+
+    .bond-character {
+        width: 100%;
+    }
+
+    .bond-value {
+        font-size: 27px;
+    }
+
+    .bond-footer {
+        flex-direction: column;
+    }
+}

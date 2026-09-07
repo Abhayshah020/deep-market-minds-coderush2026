@@ -1,0 +1,491 @@
+/* =========================================
+   INTERNATIONAL MARKETS
+   Deep Markets Mind
+   Light / Friendly Game Theme
+   ========================================= */
+
+.international-section {
+  margin-top: 30px;
+  padding: 28px;
+  border: 1px solid #dce7ef;
+  border-radius: 22px;
+  background: #f8fbfd;
+  box-shadow: 0 8px 30px rgba(39, 74, 102, 0.06);
+}
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.international-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 4px 4px 28px;
+}
+
+.international-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 11px;
+  border-radius: 999px;
+  background: #eaf5ff;
+  border: 1px solid #d9eaf6;
+  color: #3279a9;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.international-header h2 {
+  margin: 10px 0 6px;
+  color: #19324a;
+  font-size: 28px;
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+.international-header p {
+  margin: 0;
+  max-width: 650px;
+  color: #718398;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.international-header-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  border-radius: 18px;
+  background: #fff4d9;
+  border: 1px solid #f1e2bb;
+  font-size: 31px;
+}
+
+/* =========================================
+   MARKET GROUP
+   ========================================= */
+
+.market-group {
+  padding: 22px;
+  border: 1px solid #dfe9f0;
+  border-radius: 18px;
+  background: #ffffff;
+}
+
+.market-group + .market-group {
+  margin-top: 22px;
+}
+
+.market-group-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.market-group-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  font-size: 20px;
+}
+
+/* Different soft colors */
+
+.stocks-icon {
+  background: #eaf4ff;
+  border: 1px solid #d7e8f6;
+}
+
+.commodities-icon {
+  background: #fff5dc;
+  border: 1px solid #f1e3bc;
+}
+
+.companies-icon {
+  background: #eaf8f1;
+  border: 1px solid #d7eee2;
+}
+
+.market-group-header h3 {
+  margin: 0;
+  color: #263f55;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.market-group-header p {
+  margin: 3px 0 0;
+  color: #8493a2;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* =========================================
+   ASSET GRID
+   ========================================= */
+
+.market-assets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+/* =========================================
+   MARKET ASSET CARD
+   ========================================= */
+
+.market-asset-card {
+  padding: 18px;
+  border: 1px solid #e0e9ef;
+  border-radius: 16px;
+  background: #fbfdff;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.market-asset-card:hover {
+  transform: translateY(-2px);
+  border-color: #c7dce9;
+  box-shadow: 0 8px 22px rgba(46, 82, 108, 0.08);
+}
+
+/* =========================================
+   ASSET HEADER
+   ========================================= */
+
+.asset-card-top {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.asset-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  background: #edf6ff;
+  border: 1px solid #dcebf7;
+  font-size: 15px;
+}
+
+.asset-name {
+  color: #526b80;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* =========================================
+   VALUE
+   ========================================= */
+
+.asset-value {
+  margin-top: 13px;
+  color: #19324a;
+  font-size: 27px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.asset-value-label {
+  margin-top: 5px;
+  color: #98a5b1;
+  font-size: 10px;
+}
+
+/* =========================================
+   OHLC
+   ========================================= */
+
+.asset-ohlc {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.asset-ohlc-item {
+  padding: 9px;
+  border-radius: 9px;
+  background: #f1f6f9;
+}
+
+.asset-ohlc-item span {
+  display: block;
+  color: #8a9aa8;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.asset-ohlc-item strong {
+  display: block;
+  margin-top: 3px;
+  color: #405a70;
+  font-size: 12px;
+}
+
+.asset-ohlc-item.high {
+  background: #ecf8f1;
+}
+
+.asset-ohlc-item.high strong {
+  color: #41916d;
+}
+
+.asset-ohlc-item.low {
+  background: #fff0ef;
+}
+
+.asset-ohlc-item.low strong {
+  color: #c96d68;
+}
+
+/* =========================================
+   SUPPLY / DEMAND
+   ========================================= */
+
+.asset-balance {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.asset-balance > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 9px;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid #e6edf2;
+}
+
+.asset-balance span {
+  color: #8a9aa8;
+  font-size: 10px;
+}
+
+.asset-balance strong {
+  color: #526b80;
+  font-size: 11px;
+}
+
+/* =========================================
+   COMPANIES
+   ========================================= */
+
+.companies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 14px;
+}
+
+.company-card {
+  padding: 19px;
+  border: 1px solid #e0e9ef;
+  border-radius: 16px;
+  background: #fbfdff;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.company-card:hover {
+  transform: translateY(-2px);
+  border-color: #c7dce9;
+  box-shadow: 0 8px 22px rgba(46, 82, 108, 0.08);
+}
+
+/* =========================================
+   COMPANY HEADER
+   ========================================= */
+
+.company-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.company-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: #eaf8f1;
+  border: 1px solid #d5eee1;
+  color: #43936e;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.company-header h3 {
+  margin: 0;
+  color: #263f55;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.company-header span {
+  display: block;
+  margin-top: 2px;
+  color: #8b9aa7;
+  font-size: 10px;
+}
+
+.company-status {
+  margin-left: auto;
+  padding: 5px 7px;
+  border-radius: 999px;
+  background: #eef6ff;
+  color: #4380a8;
+  font-size: 8px;
+  font-weight: 800;
+}
+
+/* =========================================
+   COMPANY PRICE
+   ========================================= */
+
+.company-price {
+  margin-top: 17px;
+  color: #19324a;
+  font-size: 28px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.company-price-label {
+  margin-top: 5px;
+  color: #98a5b1;
+  font-size: 10px;
+}
+
+/* =========================================
+   BUSINESS DATA
+   ========================================= */
+
+.company-business-data {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+  margin-top: 17px;
+}
+
+.business-stat {
+  padding: 10px;
+  border-radius: 10px;
+  background: #f2f7fa;
+}
+
+.business-stat span {
+  display: block;
+  color: #8293a2;
+  font-size: 10px;
+}
+
+.business-stat strong {
+  display: block;
+  margin-top: 4px;
+  color: #435c71;
+  font-size: 12px;
+}
+
+/* =========================================
+   COMPANY OHLC
+   ========================================= */
+
+.company-ohlc {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #e5edf2;
+}
+
+.company-ohlc div {
+  color: #526b80;
+  font-size: 10px;
+  text-align: center;
+}
+
+.company-ohlc span {
+  display: block;
+  margin-bottom: 3px;
+  color: #9aa7b2;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 700px) {
+  .international-section {
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .international-header {
+    align-items: flex-start;
+  }
+
+  .international-header h2 {
+    font-size: 23px;
+  }
+
+  .international-header-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 14px;
+    font-size: 24px;
+  }
+
+  .market-group {
+    padding: 16px;
+  }
+
+  .market-assets-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .companies-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .international-header {
+    display: block;
+  }
+
+  .international-header-icon {
+    display: none;
+  }
+
+  .company-status {
+    display: none;
+  }
+}

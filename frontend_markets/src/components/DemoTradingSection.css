@@ -1,0 +1,1630 @@
+/* =====================================================
+   DEMO TRADING SECTION
+===================================================== */
+
+.trading-section {
+    margin-top: 30px;
+    padding: 28px;
+
+    background: #fffdf7;
+
+    border: 3px solid #d9cdea;
+    border-radius: 14px;
+
+    color: #302747;
+
+    box-shadow:
+        6px 6px 0 rgba(118, 81, 169, 0.12);
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.trading-hero {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    min-height: 250px;
+
+    padding: 34px 38px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f5efff 0%,
+            #eafbff 100%
+        );
+
+    border: 3px solid #cfc2e2;
+    border-radius: 11px;
+}
+
+.trading-hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 610px;
+}
+
+.trading-kicker {
+    display: inline-flex;
+
+    padding: 7px 11px;
+
+    background: #ffd84d;
+
+    border: 2px solid #302747;
+    border-radius: 5px;
+
+    color: #574810;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    letter-spacing: 0.7px;
+}
+
+.trading-hero h2 {
+    margin: 17px 0 0;
+
+    font-family: "Nunito", sans-serif;
+
+    font-size: clamp(42px, 5vw, 62px);
+
+    line-height: 0.88;
+
+    letter-spacing: -3px;
+
+    font-weight: 900;
+}
+
+.trading-hero h2 span {
+    color: #31b9da;
+}
+
+.trading-hero p {
+    max-width: 500px;
+
+    margin: 17px 0;
+
+    color: #817791;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+.virtual-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 8px 12px;
+
+    background: white;
+
+    border: 2px solid #a9dfeb;
+    border-radius: 5px;
+
+    color: #277f94;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+    font-weight: 600;
+}
+
+.virtual-badge span {
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   HERO DECORATION
+===================================================== */
+
+.trading-hero-illustration {
+    position: relative;
+
+    width: 270px;
+    height: 210px;
+
+    flex-shrink: 0;
+}
+
+.trading-controller {
+    position: absolute;
+
+    right: 25px;
+    top: 65px;
+
+    width: 145px;
+    height: 78px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-around;
+
+    padding: 0 17px;
+
+    background: #7651a9;
+
+    border: 4px solid #302747;
+
+    border-radius: 35px 35px 28px 28px;
+
+    box-shadow:
+        5px 5px 0 #31c6e8;
+
+    transform: rotate(-8deg);
+
+    color: white;
+}
+
+.trading-controller span {
+    width: 24px;
+    height: 24px;
+
+    display: grid;
+
+    place-items: center;
+
+    background: #fff;
+
+    color: #7651a9;
+
+    border-radius: 50%;
+
+    font-size: 9px;
+}
+
+.hero-chart {
+    position: absolute;
+
+    right: 0;
+    bottom: 5px;
+
+    width: 150px;
+    height: 85px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 10px;
+
+    background: rgba(255,255,255,0.7);
+
+    border: 2px dashed #a9dfeb;
+
+    border-radius: 8px;
+
+    transform: rotate(3deg);
+}
+
+.hero-chart span {
+    width: 13px;
+
+    border-radius: 3px 3px 0 0;
+
+    background: #31b9da;
+}
+
+.hero-chart span:nth-child(1) {
+    height: 25px;
+}
+
+.hero-chart span:nth-child(2) {
+    height: 38px;
+}
+
+.hero-chart span:nth-child(3) {
+    height: 32px;
+}
+
+.hero-chart span:nth-child(4) {
+    height: 54px;
+}
+
+.hero-chart span:nth-child(5) {
+    height: 67px;
+}
+
+.coin {
+    position: absolute;
+
+    display: grid;
+
+    place-items: center;
+
+    width: 42px;
+    height: 42px;
+
+    background: #ffd84d;
+
+    border: 3px solid #302747;
+
+    border-radius: 50%;
+
+    color: #76551b;
+
+    font-family: "DM Mono", monospace;
+
+    font-weight: 600;
+
+    box-shadow:
+        3px 3px 0 #e8bf35;
+}
+
+.coin-one {
+    top: 20px;
+    right: 180px;
+
+    transform: rotate(-10deg);
+}
+
+.coin-two {
+    top: 10px;
+    right: 55px;
+
+    transform: rotate(12deg);
+}
+
+
+/* =====================================================
+   ACCOUNT BOARD
+===================================================== */
+
+.account-board {
+    margin-top: 20px;
+
+    padding: 20px;
+
+    background: #ffffff;
+
+    border: 3px solid #e0d8ea;
+    border-radius: 9px;
+}
+
+.board-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    margin-bottom: 16px;
+}
+
+.board-icon {
+    width: 43px;
+    height: 43px;
+
+    display: grid;
+
+    place-items: center;
+
+    background: #fff8d9;
+
+    border: 2px solid #efd875;
+    border-radius: 6px;
+
+    font-size: 19px;
+}
+
+.board-title strong {
+    display: block;
+
+    color: #443463;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 10px;
+}
+
+.board-title small {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #a097aa;
+
+    font-size: 10px;
+}
+
+.account-stats {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            5,
+            1fr
+        );
+
+    gap: 9px;
+}
+
+.account-stat {
+    padding: 14px;
+
+    background: #f8f5fb;
+
+    border: 2px solid #e6dfed;
+
+    border-radius: 6px;
+}
+
+.account-stat span {
+    display: block;
+
+    color: #9a91a6;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 7px;
+}
+
+.account-stat strong {
+    display: block;
+
+    margin-top: 7px;
+
+    color: #443463;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 15px;
+}
+
+.cash-stat {
+    background: #f1fff8;
+    border-color: #b9e7cf;
+}
+
+.equity-stat {
+    background: #eefcff;
+    border-color: #b7e5ef;
+}
+
+.total-stat {
+    background: #fff8d9;
+    border-color: #efd875;
+}
+
+
+/* =====================================================
+   TRADING STEPS
+===================================================== */
+
+.trading-steps {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 13px;
+
+    margin: 20px 0;
+    padding: 17px;
+
+    background: #f5efff;
+
+    border: 2px dashed #d3c4e4;
+    border-radius: 8px;
+}
+
+.step {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    flex: 1;
+}
+
+.step > span {
+    width: 31px;
+    height: 31px;
+
+    display: grid;
+
+    place-items: center;
+
+    flex-shrink: 0;
+
+    background: #7651a9;
+
+    color: white;
+
+    border-radius: 50%;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.step strong {
+    display: block;
+
+    color: #443463;
+
+    font-size: 10px;
+}
+
+.step small {
+    display: block;
+
+    margin-top: 2px;
+
+    color: #968ca0;
+
+    font-size: 8px;
+}
+
+.step-arrow {
+    color: #b0a0c2;
+
+    font-size: 19px;
+}
+
+
+/* =====================================================
+   ORDER PANEL
+===================================================== */
+
+.order-panel {
+    margin-top: 20px;
+
+    padding: 23px;
+
+    background: #ffffff;
+
+    border: 3px solid #e0d8ea;
+    border-radius: 9px;
+}
+
+.panel-heading {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding-bottom: 18px;
+
+    border-bottom: 2px dashed #e5deeb;
+}
+
+.panel-heading-icon {
+    width: 47px;
+    height: 47px;
+
+    display: grid;
+
+    place-items: center;
+
+    background: #eafbff;
+
+    border: 3px solid #9cdeea;
+    border-radius: 7px;
+
+    font-size: 19px;
+}
+
+.panel-heading span {
+    color: #31a5bd;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 8px;
+    font-weight: 600;
+}
+
+.panel-heading h3 {
+    margin: 3px 0 0;
+
+    color: #302747;
+
+    font-size: 19px;
+}
+
+.panel-heading p {
+    margin: 3px 0 0;
+
+    color: #958b9f;
+
+    font-size: 10px;
+}
+
+.order-form-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(190px, 1fr)
+        );
+
+    gap: 15px;
+
+    margin-top: 21px;
+}
+
+.trade-field label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #665978;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 8px;
+    font-weight: 600;
+}
+
+.trade-field select,
+.trade-field input {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 12px;
+
+    background: #fbfaff;
+
+    border: 2px solid #ddd5e7;
+    border-radius: 6px;
+
+    color: #302747;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    outline: none;
+
+    transition:
+        border-color 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+.trade-field select:focus,
+.trade-field input:focus {
+    border-color: #31b9da;
+
+    box-shadow:
+        0 0 0 3px rgba(
+            49,
+            185,
+            218,
+            0.12
+        );
+}
+
+.trade-field select {
+    cursor: pointer;
+}
+
+.field-hint {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #a098aa;
+
+    font-size: 8px;
+}
+
+
+/* =====================================================
+   TRADE PREVIEW
+===================================================== */
+
+.trade-preview {
+    margin-top: 18px;
+
+    padding: 20px;
+
+    background: #fff8d9;
+
+    border: 3px solid #efd875;
+    border-radius: 8px;
+}
+
+.preview-heading {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.preview-heading > span {
+    width: 38px;
+    height: 38px;
+
+    display: grid;
+
+    place-items: center;
+
+    background: #ffd84d;
+
+    border-radius: 6px;
+
+    font-size: 16px;
+}
+
+.preview-heading strong {
+    display: block;
+
+    color: #665419;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+}
+
+.preview-heading small {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #9b8b50;
+
+    font-size: 9px;
+}
+
+.preview-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            5,
+            1fr
+        );
+
+    gap: 8px;
+
+    margin-top: 15px;
+}
+
+.preview-card {
+    padding: 12px;
+
+    background: rgba(
+        255,
+        255,
+        255,
+        0.65
+    );
+
+    border: 1px solid #eadb94;
+
+    border-radius: 5px;
+}
+
+.preview-card span {
+    display: block;
+
+    color: #a08e4b;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 7px;
+}
+
+.preview-card strong {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #594b18;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 13px;
+}
+
+.margin-card {
+    background: #eafbff;
+    border-color: #a9dfeb;
+}
+
+.margin-card span {
+    color: #3e8b9d;
+}
+
+.margin-card strong {
+    color: #246f80;
+}
+
+
+/* =====================================================
+   QUOTE PANEL
+===================================================== */
+
+.quote-panel {
+    margin-top: 18px;
+
+    padding: 20px;
+
+    background: #ffffff;
+
+    border: 3px solid #cde9ef;
+    border-radius: 8px;
+}
+
+.quote-heading {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-bottom: 15px;
+}
+
+.live-dot {
+    width: 9px;
+    height: 9px;
+
+    background: #53c58a;
+
+    border: 2px solid #c4efd8;
+
+    border-radius: 50%;
+}
+
+.quote-heading strong {
+    display: block;
+
+    color: #277f94;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+}
+
+.quote-heading small {
+    display: block;
+
+    margin-top: 2px;
+
+    color: #9aadb1;
+
+    font-size: 8px;
+}
+
+.quote-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            5,
+            1fr
+        );
+
+    gap: 8px;
+}
+
+.quote-value {
+    padding: 13px;
+
+    background: #f8fbfc;
+
+    border: 1px solid #d9ebee;
+
+    border-radius: 5px;
+}
+
+.quote-value span {
+    display: block;
+
+    color: #8ba0a4;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 7px;
+}
+
+.quote-value strong {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #30494f;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 13px;
+}
+
+.quote-value small {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #a5b3b5;
+
+    font-size: 7px;
+}
+
+.quote-value.bid {
+    background: #f1fff8;
+    border-color: #b9e7cf;
+}
+
+.quote-value.bid strong {
+    color: #23855a;
+}
+
+.quote-value.ask {
+    background: #fff4f5;
+    border-color: #efc9ce;
+}
+
+.quote-value.ask strong {
+    color: #bd4c58;
+}
+
+
+/* =====================================================
+   BUY / SELL
+===================================================== */
+
+.trade-actions {
+    margin-top: 20px;
+
+    padding: 22px;
+
+    background: #f5efff;
+
+    border: 3px solid #d6c7e7;
+    border-radius: 9px;
+}
+
+.action-title > span {
+    color: #7651a9;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 8px;
+    font-weight: 600;
+}
+
+.action-title h3 {
+    margin: 4px 0 0;
+
+    color: #302747;
+
+    font-size: 21px;
+}
+
+.action-title p {
+    margin: 4px 0 0;
+
+    color: #8c8197;
+
+    font-size: 10px;
+}
+
+.action-buttons {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 12px;
+
+    margin-top: 17px;
+}
+
+.buy-button,
+.sell-button {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    min-height: 75px;
+
+    padding: 12px 15px;
+
+    border: 3px solid;
+
+    border-radius: 8px;
+
+    color: white;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    font-family: inherit;
+
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+.buy-button {
+    background: #35b978;
+    border-color: #23865a;
+
+    box-shadow:
+        4px 4px 0 #23865a;
+}
+
+.sell-button {
+    background: #e56b75;
+    border-color: #bd4c58;
+
+    box-shadow:
+        4px 4px 0 #bd4c58;
+}
+
+.buy-button:hover:not(:disabled),
+.sell-button:hover:not(:disabled) {
+    transform: translateY(-3px);
+
+    box-shadow:
+        4px 7px 0 currentColor;
+}
+
+.buy-button:disabled {
+    background: #a9cbb9;
+    border-color: #8eaa9c;
+
+    cursor: not-allowed;
+
+    box-shadow: none;
+}
+
+.sell-button:disabled {
+    background: #d7a5aa;
+    border-color: #bc8b91;
+
+    cursor: not-allowed;
+
+    box-shadow: none;
+}
+
+.action-emoji {
+    font-size: 27px;
+}
+
+.buy-button > span:nth-child(2),
+.sell-button > span:nth-child(2) {
+    flex: 1;
+}
+
+.buy-button strong,
+.sell-button strong {
+    display: block;
+
+    font-size: 17px;
+
+    letter-spacing: 0.5px;
+}
+
+.buy-button small,
+.sell-button small {
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 9px;
+
+    opacity: 0.9;
+}
+
+.buy-button b,
+.sell-button b {
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+}
+
+.risk-note {
+    margin-top: 13px;
+
+    padding: 10px 12px;
+
+    background: #fff;
+
+    border: 1px dashed #d4c6df;
+    border-radius: 5px;
+
+    color: #857a90;
+
+    font-size: 9px;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   POSITION
+===================================================== */
+
+.position-panel {
+    margin-top: 20px;
+
+    padding: 21px;
+
+    background: #eafbff;
+
+    border: 3px solid #a9dfeb;
+    border-radius: 8px;
+}
+
+.position-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+.position-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.position-icon {
+    width: 44px;
+    height: 44px;
+
+    display: grid;
+
+    place-items: center;
+
+    background: white;
+
+    border: 2px solid #9ed9e6;
+    border-radius: 6px;
+
+    font-size: 18px;
+}
+
+.position-title span {
+    display: block;
+
+    color: #3d8999;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 8px;
+}
+
+.position-title h3 {
+    margin: 3px 0 0;
+
+    color: #276878;
+
+    font-size: 18px;
+}
+
+.close-position-button {
+    padding: 9px 13px;
+
+    background: #fff;
+
+    border: 2px solid #d8b9be;
+    border-radius: 5px;
+
+    color: #a94d59;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.close-position-button:hover {
+    background: #fff3f4;
+}
+
+.position-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            6,
+            1fr
+        );
+
+    gap: 8px;
+
+    margin-top: 17px;
+}
+
+.position-card {
+    padding: 12px;
+
+    background: rgba(
+        255,
+        255,
+        255,
+        0.72
+    );
+
+    border: 1px solid #c9e7ed;
+
+    border-radius: 5px;
+}
+
+.position-card span {
+    display: block;
+
+    color: #759ca4;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 7px;
+}
+
+.position-card strong {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #315b64;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   ORDERS
+===================================================== */
+
+.orders-panel {
+    margin-top: 20px;
+
+    padding: 22px;
+
+    background: #ffffff;
+
+    border: 3px solid #e0d8ea;
+    border-radius: 9px;
+}
+
+.orders-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 17px;
+}
+
+.orders-kicker {
+    color: #7651a9;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 8px;
+    font-weight: 600;
+}
+
+.orders-header h3 {
+    margin: 4px 0 0;
+
+    color: #302747;
+
+    font-size: 21px;
+}
+
+.orders-header p {
+    margin: 3px 0 0;
+
+    color: #968b9f;
+
+    font-size: 10px;
+}
+
+.orders-count {
+    min-width: 58px;
+
+    padding: 10px;
+
+    background: #f5efff;
+
+    border: 2px solid #d8c9e8;
+    border-radius: 6px;
+
+    color: #7651a9;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    text-align: center;
+}
+
+.orders-count span {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #a195aa;
+
+    font-size: 6px;
+}
+
+.orders-table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+
+    border: 2px solid #ebe5ef;
+    border-radius: 6px;
+}
+
+.orders-table {
+    width: 100%;
+
+    min-width: 780px;
+
+    border-collapse: collapse;
+
+    font-size: 10px;
+}
+
+.orders-table th {
+    padding: 11px;
+
+    background: #f8f5fb;
+
+    color: #82768d;
+
+    border-bottom: 2px solid #e6dfed;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 7px;
+
+    text-align: left;
+
+    white-space: nowrap;
+}
+
+.orders-table td {
+    padding: 11px;
+
+    color: #655a6e;
+
+    border-bottom: 1px solid #eeeaf1;
+
+    white-space: nowrap;
+}
+
+.orders-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.orders-table tbody tr:hover {
+    background: #fcfaff;
+}
+
+.order-id {
+    color: #a095aa;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 8px;
+}
+
+.side-badge,
+.type-badge,
+.status-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 4px 7px;
+
+    border-radius: 4px;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 7px;
+    font-weight: 600;
+}
+
+.side-badge.buy {
+    background: #e4f8ed;
+
+    color: #258458;
+
+    border: 1px solid #b8e3ca;
+}
+
+.side-badge.sell {
+    background: #fff0f1;
+
+    color: #bd4d59;
+
+    border: 1px solid #ecc4c9;
+}
+
+.type-badge {
+    background: #f3eff8;
+
+    color: #765f89;
+
+    border: 1px solid #ddd3e7;
+}
+
+.status-badge {
+    background: #fff8d9;
+
+    color: #806c23;
+
+    border: 1px solid #e9d88b;
+}
+
+.empty-orders {
+    padding: 35px !important;
+
+    text-align: center;
+
+    background: #fcfbfd;
+}
+
+.empty-orders span {
+    display: block;
+
+    font-size: 30px;
+}
+
+.empty-orders strong {
+    display: block;
+
+    margin-top: 8px;
+
+    color: #5c5065;
+
+    font-size: 12px;
+}
+
+.empty-orders small {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #a49aa9;
+
+    font-size: 9px;
+}
+
+
+/* =====================================================
+   TRADER TIP
+===================================================== */
+
+.trading-tip {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 20px;
+
+    padding: 16px;
+
+    background: #f5efff;
+
+    border: 2px solid #ddd0ed;
+    border-radius: 7px;
+}
+
+.tip-icon {
+    width: 41px;
+    height: 41px;
+
+    display: grid;
+
+    place-items: center;
+
+    flex-shrink: 0;
+
+    background: #ffd84d;
+
+    border-radius: 6px;
+
+    font-size: 18px;
+}
+
+.trading-tip strong {
+    color: #55436e;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 8px;
+}
+
+.trading-tip p {
+    margin: 4px 0 0;
+
+    color: #817791;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .account-stats {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .preview-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .quote-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .position-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .trading-hero-illustration {
+        opacity: 0.75;
+    }
+}
+
+
+@media (max-width: 750px) {
+
+    .trading-section {
+        padding: 20px;
+    }
+
+    .trading-hero {
+        padding: 27px;
+
+        min-height: auto;
+    }
+
+    .trading-hero-illustration {
+        display: none;
+    }
+
+    .account-stats {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .trading-steps {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .step-arrow {
+        display: none;
+    }
+
+    .step {
+        width: 100%;
+    }
+
+    .preview-grid,
+    .quote-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .position-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 520px) {
+
+    .trading-section {
+        padding: 15px;
+    }
+
+    .trading-hero {
+        padding: 23px;
+    }
+
+    .trading-hero h2 {
+        font-size: 44px;
+
+        letter-spacing: -2px;
+    }
+
+    .account-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .order-panel,
+    .trade-preview,
+    .quote-panel,
+    .trade-actions,
+    .position-panel,
+    .orders-panel {
+        padding: 16px;
+    }
+
+    .order-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .preview-grid,
+    .quote-grid,
+    .position-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .action-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    .position-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .close-position-button {
+        width: 100%;
+    }
+
+    .trading-tip {
+        align-items: flex-start;
+    }
+}
