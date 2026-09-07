@@ -1,0 +1,508 @@
+.performance-report {
+    --performance-cream: #fff8e8;
+    --performance-white: #ffffff;
+    --performance-purple-950: #241b42;
+    --performance-purple: #8058b9;
+    --performance-purple-light: #eee6ff;
+    --performance-purple-border: #d8c8ef;
+    --performance-cyan: #32c9eb;
+    --performance-cyan-light: #e4faff;
+    --performance-yellow: #ffd84d;
+    --performance-green: #16a34a;
+    --performance-red: #dc2626;
+    --performance-orange: #ea580c;
+    --performance-gray: #666666;
+
+    position: relative;
+    margin-top: 30px;
+    padding: 26px;
+
+    background: var(--performance-cream);
+
+    border: 3px solid var(--performance-purple-border);
+    border-radius: 18px;
+
+    box-shadow:
+        6px 6px 0 var(--performance-purple-light);
+
+    color: var(--performance-purple-950);
+
+    overflow: hidden;
+}
+
+.performance-report::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--performance-yellow) 0%,
+            var(--performance-cyan) 48%,
+            var(--performance-purple) 100%
+        );
+}
+
+.performance-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 24px;
+
+    flex-wrap: wrap;
+}
+
+.performance-eyebrow {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 5px 9px;
+
+    background: var(--performance-purple);
+    color: #ffffff;
+
+    border: 2px solid var(--performance-purple-950);
+    border-radius: 7px;
+
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+}
+
+.performance-header h2 {
+    margin: 9px 0 0;
+
+    font-size: 27px;
+    line-height: 1.1;
+    font-weight: 900;
+}
+
+.performance-header p {
+    margin: 7px 0 0;
+
+    color: #746c82;
+
+    font-size: 13px;
+}
+
+.performance-grade-box {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 10px 14px;
+
+    background: var(--performance-white);
+
+    border: 3px solid var(--performance-purple-border);
+    border-radius: 13px;
+
+    box-shadow: 4px 4px 0 var(--performance-purple-light);
+}
+
+.performance-grade {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+
+    border: 4px solid;
+
+    border-radius: 50%;
+
+    font-size: 21px;
+    font-weight: 900;
+}
+
+.performance-grade-label {
+    color: #81798d;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.performance-score {
+    margin-top: 2px;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.performance-score-guide {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 20px;
+    padding: 13px 15px;
+
+    background: var(--performance-yellow);
+
+    border: 3px solid var(--performance-purple-950);
+    border-radius: 12px;
+
+    box-shadow: 4px 4px 0 var(--performance-purple-950);
+}
+
+.guide-icon {
+    font-size: 25px;
+}
+
+.performance-score-guide strong {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+.performance-score-guide p {
+    margin: 3px 0 0;
+
+    color: #4d4262;
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.performance-section {
+    margin-top: 25px;
+}
+
+.performance-section-heading,
+.performance-panel-heading {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.section-icon {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 auto;
+
+    background: var(--performance-cyan-light);
+
+    border: 2px solid var(--performance-cyan);
+    border-radius: 9px;
+
+    font-size: 18px;
+}
+
+.performance-section-heading h3,
+.performance-panel-heading h3 {
+    margin: 0;
+
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.performance-section-heading p,
+.performance-panel-heading p {
+    margin: 2px 0 0;
+
+    color: #81798d;
+
+    font-size: 11px;
+}
+
+.performance-metric-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(150px, 1fr)
+        );
+
+    gap: 10px;
+
+    margin-top: 12px;
+}
+
+.performance-metric {
+    min-width: 0;
+
+    padding: 15px;
+
+    background: var(--performance-white);
+
+    border: 2px solid #e3dceb;
+    border-radius: 11px;
+
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+.performance-metric:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 3px 3px 0 var(--performance-purple-light);
+}
+
+.performance-metric-label {
+    color: #81798d;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.performance-metric-value {
+    margin-top: 6px;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 18px;
+    font-weight: 900;
+
+    word-break: break-word;
+}
+
+.performance-metric-subvalue {
+    margin-top: 4px;
+
+    color: #8d8597;
+
+    font-size: 11px;
+}
+
+.performance-panel {
+    padding: 16px;
+
+    background: var(--performance-white);
+
+    border: 2px solid #e3dceb;
+    border-radius: 12px;
+}
+
+.performance-drawdown {
+    margin-top: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #fff8f8
+        );
+}
+
+.performance-detail-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(180px, 1fr)
+        );
+
+    gap: 7px 20px;
+
+    margin-top: 12px;
+}
+
+.performance-detail-row {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 9px;
+
+    font-size: 12px;
+}
+
+.performance-detail-label {
+    color: #746c82;
+}
+
+.performance-detail-value {
+    font-family: "DM Mono", monospace;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    text-align: right;
+
+    word-break: break-word;
+}
+
+.performance-two-column {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(260px, 1fr)
+        );
+
+    gap: 10px;
+
+    margin-top: 10px;
+}
+
+.performance-behaviour {
+    margin-top: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #faf7ff
+        );
+}
+
+.performance-learning {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    margin-top: 22px;
+    padding: 15px;
+
+    background: var(--performance-purple);
+
+    color: #ffffff;
+
+    border: 3px solid var(--performance-purple-950);
+    border-radius: 13px;
+
+    box-shadow: 4px 4px 0 var(--performance-purple-950);
+}
+
+.learning-character {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 auto;
+
+    background: var(--performance-yellow);
+
+    border: 2px solid var(--performance-purple-950);
+    border-radius: 10px;
+
+    font-size: 24px;
+}
+
+.performance-learning strong {
+    font-size: 11px;
+    letter-spacing: 0.7px;
+}
+
+.performance-learning p {
+    margin: 3px 0 0;
+
+    color: #eee7ff;
+
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.performance-loading {
+    min-height: 150px;
+}
+
+.performance-loading-badge {
+    display: inline-block;
+
+    padding: 5px 9px;
+
+    background: var(--performance-cyan-light);
+
+    border: 2px solid var(--performance-cyan);
+    border-radius: 7px;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.6px;
+}
+
+.performance-loading h2 {
+    margin: 10px 0 0;
+
+    font-size: 22px;
+}
+
+.performance-loading p {
+    margin: 7px 0 0;
+
+    color: #81798d;
+
+    font-size: 13px;
+}
+
+@media (max-width: 700px) {
+    .performance-report {
+        padding: 19px;
+        border-radius: 14px;
+    }
+
+    .performance-header h2 {
+        font-size: 23px;
+    }
+
+    .performance-grade-box {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .performance-metric-grid {
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+    }
+
+    .performance-detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .performance-learning {
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 430px) {
+    .performance-metric-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .performance-score-guide {
+        align-items: flex-start;
+    }
+}

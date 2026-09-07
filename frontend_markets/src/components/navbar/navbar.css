@@ -1,0 +1,443 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500;600&family=Nunito:wght@400;600;700;800;900&display=swap");
+
+:root {
+  --navbar-bg: #fffdf7;
+  --navbar-border: #ded5ec;
+
+  --purple-950: #302447;
+  --purple-900: #443463;
+  --purple: #7651a9;
+  --purple-light: #a88bd0;
+
+  --cyan: #31c6e8;
+  --cyan-light: #e5faff;
+
+  --yellow: #ffd84d;
+  --yellow-light: #fff5c9;
+
+  --green: #36b97c;
+
+  --text: #332847;
+  --muted: #817791;
+
+  --shadow: rgba(48, 36, 71, 0.08);
+}
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+  position: sticky;
+  top: 0;
+
+  z-index: 100;
+
+  width: 100%;
+
+  background: rgba(255, 253, 247, 0.96);
+
+  border-bottom: 2px solid var(--navbar-border);
+
+  box-shadow: 0 3px 0 rgba(118, 81, 169, 0.04);
+
+  backdrop-filter: blur(12px);
+}
+
+/* =====================================================
+   NAVBAR INNER
+===================================================== */
+
+.navbar-inner {
+  width: min(1280px, calc(100% - 40px));
+
+  min-height: 76px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+/* =====================================================
+   BRAND
+===================================================== */
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: var(--purple-950);
+
+  cursor: pointer;
+
+  font-family: "Nunito", sans-serif;
+
+  transition: 0.15s ease;
+}
+
+.navbar-brand:hover {
+  transform: translateY(-1px);
+}
+
+/* =====================================================
+   BRAND MARK
+===================================================== */
+
+.brand-mark {
+  width: 43px;
+  height: 43px;
+
+  display: grid;
+  place-items: center;
+
+  background: var(--yellow);
+
+  color: var(--purple-950);
+
+  border: 3px solid var(--purple-950);
+
+  box-shadow: 4px 4px 0 var(--cyan);
+
+  font-size: 20px;
+  font-weight: 900;
+
+  transform: rotate(-2deg);
+
+  transition: 0.15s ease;
+}
+
+.navbar-brand:hover .brand-mark {
+  transform: rotate(2deg) translateY(-1px);
+
+  box-shadow: 5px 5px 0 var(--cyan);
+}
+
+/* =====================================================
+   BRAND NAME
+===================================================== */
+
+.brand-name {
+  position: relative;
+
+  font-size: 17px;
+
+  font-weight: 900;
+
+  letter-spacing: -0.5px;
+}
+
+.brand-name::after {
+  content: "MARKET SIMULATION";
+
+  display: block;
+
+  margin-top: 2px;
+
+  color: var(--purple-light);
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  font-weight: 500;
+
+  letter-spacing: 1.2px;
+}
+
+/* =====================================================
+   RIGHT SIDE
+===================================================== */
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+}
+
+/* =====================================================
+   PROFILE
+===================================================== */
+
+.profile {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 6px 10px 6px 6px;
+
+  background: #f8f3ff;
+
+  border: 2px solid #e4daf2;
+
+  border-radius: 4px;
+}
+
+/* =====================================================
+   PROFILE AVATAR
+===================================================== */
+
+.profile-avatar {
+  width: 38px;
+  height: 38px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  background: var(--cyan-light);
+
+  color: var(--purple-950);
+
+  border: 3px solid var(--cyan);
+
+  border-radius: 3px;
+
+  font-size: 15px;
+  font-weight: 900;
+
+  box-shadow: 2px 2px 0 rgba(49, 198, 232, 0.2);
+}
+
+/* =====================================================
+   PROFILE INFO
+===================================================== */
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 100px;
+}
+
+.profile-name {
+  color: var(--purple-950);
+
+  font-size: 12px;
+
+  font-weight: 900;
+
+  line-height: 1.2;
+}
+
+.profile-email {
+  max-width: 150px;
+
+  margin-top: 2px;
+
+  overflow: hidden;
+
+  color: var(--muted);
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  line-height: 1.2;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+/* =====================================================
+   PLAYER INDICATOR
+===================================================== */
+
+.profile::before {
+  content: "PLAYER";
+
+  position: absolute;
+
+  transform: translate(-13px, -25px);
+
+  padding: 3px 6px;
+
+  background: var(--purple-900);
+
+  color: var(--yellow);
+
+  border-radius: 2px;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 6px;
+
+  letter-spacing: 0.7px;
+}
+
+/* =====================================================
+   LOGOUT
+===================================================== */
+
+.logout-button {
+  min-height: 42px;
+
+  padding: 0 17px;
+
+  background: var(--white, #ffffff);
+
+  color: var(--purple-900);
+
+  border: 3px solid var(--purple-900);
+
+  border-radius: 3px;
+
+  cursor: pointer;
+
+  box-shadow: 3px 3px 0 var(--purple-light);
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background 0.15s ease;
+}
+
+.logout-button:hover:not(:disabled) {
+  background: var(--yellow-light);
+
+  transform: translate(2px, 2px);
+
+  box-shadow: 1px 1px 0 var(--purple-light);
+}
+
+.logout-button:active:not(:disabled) {
+  transform: translate(3px, 3px);
+
+  box-shadow: none;
+}
+
+.logout-button:disabled {
+  cursor: not-allowed;
+
+  opacity: 0.55;
+
+  background: #f3eff7;
+
+  box-shadow: 2px 2px 0 #cfc5dc;
+}
+
+/* =====================================================
+   SUBTLE TOP GAME LINE
+===================================================== */
+
+.navbar::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 3px;
+
+  background: linear-gradient(
+    90deg,
+    var(--yellow) 0%,
+    var(--yellow) 28%,
+    var(--cyan) 28%,
+    var(--cyan) 62%,
+    var(--purple-light) 62%,
+    var(--purple-light) 100%
+  );
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 700px) {
+  .navbar-inner {
+    width: min(100% - 24px, 1280px);
+
+    min-height: 68px;
+
+    gap: 12px;
+  }
+
+  .brand-name {
+    font-size: 14px;
+  }
+
+  .brand-name::after {
+    font-size: 6px;
+  }
+
+  .brand-mark {
+    width: 38px;
+    height: 38px;
+
+    font-size: 17px;
+  }
+
+  .navbar-right {
+    gap: 8px;
+  }
+
+  .profile {
+    padding: 4px;
+  }
+
+  .profile-info {
+    display: none;
+  }
+
+  .profile::before {
+    display: none;
+  }
+
+  .profile-avatar {
+    width: 35px;
+    height: 35px;
+  }
+
+  .logout-button {
+    min-height: 38px;
+
+    padding: 0 10px;
+
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 430px) {
+  .navbar-inner {
+    width: calc(100% - 18px);
+  }
+
+  .brand-name {
+    display: none;
+  }
+
+  .brand-mark {
+    width: 38px;
+    height: 38px;
+  }
+
+  .logout-button {
+    padding: 0 9px;
+  }
+}

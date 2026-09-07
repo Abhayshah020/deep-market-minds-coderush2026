@@ -1,0 +1,287 @@
+/* =========================================
+   ECONOMIC STATE
+   Deep Markets Mind - Friendly Theme
+   ========================================= */
+
+.economic-section {
+    margin-top: 30px;
+    padding: 28px;
+    border: 1px solid #dce7ef;
+    border-radius: 22px;
+    background: #f8fbfd;
+    box-shadow: 0 8px 30px rgba(39, 74, 102, 0.06);
+}
+
+/* =========================================
+   MAIN HEADER
+   ========================================= */
+
+.economic-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 4px 4px 26px;
+}
+
+.economic-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 11px;
+    border-radius: 999px;
+    background: #e9f5ff;
+    color: #2875a8;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+}
+
+.economic-section-header h2 {
+    margin: 10px 0 6px;
+    color: #19324a;
+    font-size: 28px;
+    line-height: 1.15;
+    font-weight: 800;
+}
+
+.economic-section-header p {
+    margin: 0;
+    max-width: 650px;
+    color: #718398;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.economic-world-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+    border-radius: 18px;
+    background: #e9f7f1;
+    border: 1px solid #d4eee3;
+    font-size: 31px;
+}
+
+/* =========================================
+   SUBSECTION
+   ========================================= */
+
+.global-economy,
+.regional-section {
+    padding: 22px;
+    border: 1px solid #dfe9f0;
+    border-radius: 18px;
+    background: #ffffff;
+}
+
+.regional-section {
+    margin-top: 22px;
+}
+
+.subsection-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.subsection-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    border-radius: 11px;
+    background: #fff4d9;
+    border: 1px solid #f3e4ba;
+    font-size: 19px;
+}
+
+.subsection-header h3 {
+    margin: 0;
+    color: #263f55;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.subsection-header p {
+    margin: 3px 0 0;
+    color: #8493a2;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* =========================================
+   GLOBAL CARDS
+   ========================================= */
+
+.global-cards {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(170px, 1fr));
+    gap: 12px;
+}
+
+/* =========================================
+   REGIONAL GRID
+   ========================================= */
+
+.regional-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(320px, 1fr));
+    gap: 16px;
+}
+
+/* =========================================
+   ECONOMY CARD
+   ========================================= */
+
+.economy-card {
+    padding: 18px;
+    border: 1px solid #e0e9ef;
+    border-radius: 16px;
+    background: #fbfdff;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.economy-card:hover {
+    transform: translateY(-2px);
+    border-color: #c8dce9;
+    box-shadow: 0 8px 22px rgba(46, 82, 108, 0.08);
+}
+
+/* =========================================
+   REGION HEADER
+   ========================================= */
+
+.economy-card-header {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin-bottom: 16px;
+}
+
+.region-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 13px;
+    background: #eaf4ff;
+    border: 1px solid #d7e8f6;
+    color: #347eae;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.economy-card-header h4 {
+    margin: 0;
+    color: #243c52;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.economy-card-header span {
+    display: block;
+    margin-top: 2px;
+    color: #8a99a7;
+    font-size: 10px;
+}
+
+.economy-status {
+    margin-left: auto;
+    padding: 5px 8px;
+    border-radius: 999px;
+    background: #eaf8f1;
+    color: #3b966c;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+}
+
+/* =========================================
+   METRICS
+   ========================================= */
+
+.economy-metrics {
+    display: grid;
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+    gap: 9px;
+}
+
+/*
+ * The EconomicCard component already provides
+ * the metric presentation.
+ *
+ * These selectors gently restyle cards when
+ * EconomicCard inherits normal div styling.
+ */
+
+.economy-metrics > div,
+.global-cards > div {
+    border-radius: 11px;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 700px) {
+    .economic-section {
+        padding: 18px;
+        border-radius: 18px;
+    }
+
+    .economic-section-header {
+        align-items: flex-start;
+    }
+
+    .economic-section-header h2 {
+        font-size: 23px;
+    }
+
+    .economic-world-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 14px;
+        font-size: 24px;
+    }
+
+    .global-economy,
+    .regional-section {
+        padding: 16px;
+    }
+
+    .regional-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .economic-section-header {
+        display: block;
+    }
+
+    .economic-world-icon {
+        display: none;
+    }
+
+    .economy-metrics {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .economy-status {
+        display: none;
+    }
+}
